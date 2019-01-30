@@ -1,2 +1,2 @@
-# for-the-indecisives
+# for-the-indecisive
 Use when you can't decide.
