@@ -7,7 +7,7 @@ print('2. Once all options have been keyed in, key in "Done" to generate result.
 print()
 
 num = 1
-choice = input('Enter Option' + str(num) + ": ").lower()
+choice = (input('Enter Option' + str(num) + ": ")).lower()
 lst = []
 while choice != 'done':
     lst += [choice]
