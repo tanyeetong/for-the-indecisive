@@ -1,32 +1,26 @@
 #Header
 print('__________ LET ME HELP YOU DECIDE __________')
 
-#User's input
-no_of_options = int(input('How many options do you have> '))
+print('Instructions:')
+print('1. Key in options available, press "enter" to key in another option.')
+print('2. Once all options have been keyed in, key in "Done" to generate result.')
+print()
 
-#In the case where meaning of "choice(S)" not met, prompts user for a new number. 
-if no_of_options <= 1:
-    print("NOTE: Please enter a number with value more than 1.\nIf you have only 1 option, you don't need this.\n")
-    no_of_options = int(input('How many options do you have> '))
-
-print('*')
-print('*')
-print('*')
-
-#User's inputs and collates all the options.
-print('What are the options?')
-list = [' ']
-for i in range(1, no_of_options + 1):
-    where = input('Enter Option '+ str(i) + '> ')
-    list = list + [where]
-
-print('*')
-print('*')
-print('*')
+num = 1
+choice = input('Enter Option' + str(num) + ": ").lower()
+lst = []
+while choice != 'done':
+    lst += [choice]
+    num += 1
+    choice = (input('Enter Option' + str(num) + ": ")).lower()
 
 #Random pick.
 import random
-chosen = random.randrange(1,no_of_options)
+chosen = random.randrange(len(lst))
+
+print('*')
+print('*')
+print('*')
 
 #Display the chosen option.
-print(f'Go for {list[chosen]}!\n')
+print(f'Go for {lst[chosen]}!\n')
